@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "{{ include "juice-shop-chart.fullname" . }}-test-connection"
+  labels:
+    {{- include "juice-shop-chart.labels" . | nindent 4 }}
+  annotations:
+    "helm.sh/hook": test
+spec:
+  containers:
+    - name: wget
+      image: busybox
+      command: ['wget']
+      args: ['{{ include "juice-shop-chart.fullname" . }}:{{ .Values.service.port }}']
+  restartPolicy: Never
