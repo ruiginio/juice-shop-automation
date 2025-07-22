@@ -16,7 +16,7 @@ if [ ! -d "$JUICE_PATH" ]; then
     exit 1
 fi
 
-helm --install my-juice "$JUICE_PATH" \
+helm install my-juice "$JUICE_PATH" \
   --set deploymentName="${JUICE_SHOP_DEPLOYMENT_NAME}" \
   --set serviceName="${JUICE_SHOP_SERVICE_NAME}" \
   --set image.repository="${JUICE_SHOP_IMAGE_REPO}"
