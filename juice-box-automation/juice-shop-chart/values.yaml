@@ -9,6 +9,9 @@ deployment:
 # Service name
 service:
   name: juice-shop-service
+  type: LoadBalancer
+  port: 80
+  targetport: 3000
 
 # This will set the replicaset count more information can be found here: https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/
 replicaCount: 1
