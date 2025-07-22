@@ -41,6 +41,10 @@ Before running the depoloyment please check the following when running minikube 
 
 Clone the repo to your local folder
 
+Give the deployment script the permissions to execute
+
+**chmod +x deploy-juice-shop.sh**
+
 Run the script **deploy-juice-shop.sh** in the same folder as the helm chart
 
 `./deploy-juice-shop.sh`
