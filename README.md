@@ -43,7 +43,7 @@ Clone the repo to your local folder
 
 Give the deployment script the permissions to execute
 
-**chmod +x deploy-juice-shop.sh**
+`chmod +x deploy-juice-shop.sh`
 
 Run the script **deploy-juice-shop.sh** in the same folder as the helm chart
 
