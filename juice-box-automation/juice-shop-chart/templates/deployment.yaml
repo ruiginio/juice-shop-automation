@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "juice-shop-chart.fullname" . }}
+  name: {{ .Values.deployment.name }}
   labels:
     {{- include "juice-shop-chart.labels" . | nindent 4 }}
 spec:
